@@ -6,26 +6,6 @@
 th { background:#eff5fc; padding:10px; text-align:center; }	
 td { padding:10px; }
 </style>
-<script type="text/javascript" language="javascript">// <![CDATA[
-	function checkAll(ele) {
-		var checkboxes = document.getElementsByTagName('input');
-		if (ele.checked) {
-			 for (var i = 0; i < checkboxes.length; i++) {
-				 if (checkboxes[i].type == 'checkbox') {
-					 checkboxes[i].checked = true;
-				 }
-			 }
-		} else {
-			 for (var i = 0; i < checkboxes.length; i++) {
-				 console.log(i)
-				 if (checkboxes[i].type == 'checkbox') {
-					 checkboxes[i].checked = false;
-				 }
-			 }
-		}
-	}
-</script>
-
  <h2>Excel File Data Please Check:</h2>
  <form name="pdf_convert" method="POST" action="create_pdf.php">
  <?php
@@ -45,8 +25,6 @@ if (isset($_FILES['csv_file']) && $_FILES['csv_file']['size'] > 0)
 					foreach ($data as $key => $value) {
 						echo "<input type='hidden' value='".$value."' name='heading[]'>";
 					}
-						
-					echo "\n<tr><th><input type='checkbox' onchange='checkAll(this)' name='chk[]'/></th>";
 					for ($c=0; $c < $num; $c++)
 					{
 						echo "<th>".$data[$c] . "&nbsp;</th>";
@@ -58,16 +36,13 @@ if (isset($_FILES['csv_file']) && $_FILES['csv_file']['size'] > 0)
 					foreach ($data as $key => $value) {
 						echo "<input type='hidden' value='".$value."' name='check1[]'>";
 					}
-					 echo "\n<tr><td><input type='checkbox' name='check[]'/></td>"; 
-					
-					
+					echo "<tr>";
 					for ($c=0; $c < $num; $c++)
 						echo "<td>".$data[$c] . "&nbsp;</td>";
 					echo'</tr>';
 				}
 	$row++;
 	
-
 					if($row==4)
 						echo "\n</thead>\n<tbody>";
 					
