@@ -58,7 +58,7 @@ if (isset($_FILES['csv_file']) && $_FILES['csv_file']['size'] > 0)
 					foreach ($data as $key => $value) {
 						echo "<input type='hidden' value='".$value."' name='check1[]'>";
 					}
-					 echo "\n<tr><td><input value='".$data[0].','.$data[1].','.$data[2].','.$data[3].','.$data[4]."' type='checkbox' name='check[]'/></td>"; 
+					 echo "\n<tr><td><input type='checkbox' name='check[]'/></td>"; 
 					
 					
 					for ($c=0; $c < $num; $c++)
