@@ -1,7 +1,7 @@
  <style type="text/css">
 		.csvTable tr td{white-space: nowrap}
-	   	.csvTable tr:nth-child(even) {background: #CCC;font-size:12px;color:yellow;}
-	    .csvTable tr:nth-child(odd) {background: #FFF;font-size:12px;color:black;} 
+	   	.csvTable tr:nth-child(even) {background: #CCC;font-size:12px;color:green;}
+	    .csvTable tr:nth-child(odd) {background: #FFF;font-size:12px;color:red;} 
 	table { border:1px solid #ccc; border-collapse:collapse; padding:5px; }	
 th { background:#eff5fc; padding:10px; text-align:center; }	
 td { padding:10px; }
